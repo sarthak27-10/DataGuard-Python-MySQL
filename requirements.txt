@@ -1,0 +1,8 @@
+pandas
+sqlalchemy
+pymysql
+faker
+python-dotenv
+matplotlib
+numpy
+openpyxl
