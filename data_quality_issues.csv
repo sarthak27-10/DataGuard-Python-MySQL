@@ -1,0 +1,8 @@
+issue_id,table_name,record_id,issue_type,severity,details,detected_at
+1,customers,5,CUSTOMER_EMAIL_MISSING,MEDIUM,"Customer email is missing","2026-10-08 13:16:15"
+2,customers,113,CUSTOMER_DUPLICATE_EMAIL,HIGH,"Duplicate email found: tbaker@example.com","2026-10-08 13:16:15"
+3,customers,122,CUSTOMER_DUPLICATE_EMAIL,HIGH,"Duplicate email found: tbaker@example.com","2026-10-08 13:16:15"
+4,customers,5,CUSTOMER_EMAIL_MISSING,MEDIUM,"Customer email is missing","2026-10-08 13:18:55"
+5,customers,113,CUSTOMER_DUPLICATE_EMAIL,HIGH,"Duplicate email found: tbaker@example.com","2026-10-08 13:18:55"
+6,customers,122,CUSTOMER_DUPLICATE_EMAIL,HIGH,"Duplicate email found: tbaker@example.com","2026-10-08 13:18:55"
+7,products,1,PRODUCT_INVALID_PRICE,CRITICAL,"Invalid product price: 0.0","2026-10-08 13:18:55"

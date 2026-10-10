@@ -1,15 +1,23 @@
+
 import pandas as pd
 from src.data_profiler import profile_dataframe
 from src.db_connection import get_engine
 
 
-engine = get_engine()
+def test_mysql_customer_profiler():
+    engine = get_engine()
 
-query = "SELECT * FROM customers"
+    try:
+        with engine.connect() as connection:
+            df = pd.read_sql(
+                "SELECT * FROM customers LIMIT 10",
+                connection
+            )
 
-df = pd.read_sql(query, engine)
+        result = profile_dataframe(df)
 
-result = profile_dataframe(df)
+        assert result is not None
+        assert len(result) > 0
 
-print("Customer Data Profile:")
-print(result)
+    finally:
+        engine.dispose()
