@@ -37,26 +37,6 @@ def check_duplicate_customer_email(df):
     return issues
 
 
-def check_invalid_product_price(df):
-    issues = []
-
-    invalid_products = df[
-        df["price"].isna() | (df["price"] <= 0)
-    ]
-
-    for _, row in invalid_products.iterrows():
-        issues.append({
-            "table_name": "products",
-            "record_id": row["product_id"],
-            "issue_type": "PRODUCT_INVALID_PRICE",
-            "severity": "CRITICAL",
-            "details": f"Invalid product price: {row['price']}"
-        })
-
-    return issues
-
-
-
 
 def check_invalid_product_price(df):
     issues = []
